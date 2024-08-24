@@ -1,10 +1,14 @@
 const express = require("express");
+
+// Express app
 const app = express();
 
+// Get Response
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.json({ msg: "Response Message" });
 });
 
-app.listen(5555, () => {
+// Listen for requests
+app.listen(4000, () => {
   console.log("Port is on 5555");
 });
