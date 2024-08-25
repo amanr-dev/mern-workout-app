@@ -1,14 +1,16 @@
+require("dotenv").config();
+
 const express = require("express");
 
 // Express app
 const app = express();
 
-// Get Response
+// Get Response route
 app.get("/", (req, res) => {
-  res.json({ msg: "Response Message" });
+  res.json({ msg: "This is the get response" });
 });
 
 // Listen for requests
-app.listen(4000, () => {
-  console.log("Port is on 5555");
+app.listen(process.env.PORT_URL, () => {
+  console.log("This is the get response");
 });
